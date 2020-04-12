@@ -1,23 +1,20 @@
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-<table border="1">
-    <thead>
+<table border="1" class="table">
+  <thead>
       <tr>
-        <th>Images</th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Price</th>
-        
+          <th></th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
       </tr>
-    </thead>
-    <tbody>
+  </thead>
+  <tbody>
       <tr *ngFor="let book of books">
-        <td>
-          <img [src]="book.imageUrl">
-        </td>
-        <td>{{book.name}}</td>
-        <td>{{book.description}}</td>
-        <td>{{book.unitPrice | currency: 'INR'}}</td>
-        <td></td>
+          <td>
+              <img [src]="book.imageUrl" height="50"/>
+          </td>
+          <td>{{book.name}}</td>
+          <td>{{book.description}}</td>
+          <td>{{book.unitPrice | currency: 'INR'}}</td>
       </tr>
-    </tbody>
-  </table>
+  </tbody>
+</table>
