@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Roboto Mono', monospace;
+    src: url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&family=Roboto+Mono:wght@500&display=swap');
+}
+body{
+    font-family: 'Lobster', cursive;
+    font-family: 'Roboto Mono', monospace;
+}
