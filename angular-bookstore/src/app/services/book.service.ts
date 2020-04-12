@@ -12,9 +12,11 @@ export class BookService {
   private baseUrl ="http://localhost:8080/api/v1/books";
   constructor(private http: HttpClient) { }
 
-  getBooks(): Observable<Book[]>{
+  getBooks(categoryId: number): Observable<Book[]>{
+    const searchUrl = this.baseUrl + "/search/categoryid?id="+ categoryId;
+    console.log(categoryId);
 // we need to convert it to book array Book[]
-    return this.http.get<GetResponseBooks>(this.baseUrl).pipe(
+    return this.http.get<GetResponseBooks>(searchUrl).pipe(
       map(response=>{
         //books array is inside the _embedded check the link in spring output
         return response._embedded.books;
